@@ -1,6 +1,6 @@
 # Abyde
 Esoteric language thingy IDK pls help    
-Default file extension is `abde`
+Default file extension is `abyde`
 ## Registers
 `ro` is the register that all commands output to.    
 `ra` is a register used for basic data storage.    

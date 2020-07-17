@@ -4,7 +4,7 @@ import sys
 # check for file
 
 if len(sys.argv) < 2:
-	print("Usage: ./abyde.py [program name.abde]")
+	print("Usage: ./abyde.py [program name.abyde]")
 	sys.exit()
 
 # read program
