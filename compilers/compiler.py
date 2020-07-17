@@ -57,7 +57,7 @@ for i in range(len(commands)):
 	elif commands[i].split(' ')[0] == 'endif':
 		compiled_prg += '||'
 	elif commands[i].split(' ')[0] == 'set':
-		compiled_prg += 'm {} {}'.format(commands[i].split(' ')[1], commands[i].split(' ')[3])
+		compiled_prg += 'm {} {}|'.format(commands[i].split(' ')[1], commands[i].split(' ')[3])
 	elif commands[i].split(' ')[0] == 'input':
 		compiled_prg += 'i|m {} ro|'.format(commands[i].split(' ')[2])
 	else:
