@@ -14,7 +14,7 @@ Parameters are seperated by ` `.
 Sections are ended with `||`.    
 `a` Adds parameter one and two and outputs to ro.    
 `s` Subtracts parameter two from one and outputs to ro.    
-`m` Moves data from the second parameter to the first parameter.    
+`m` Copies data from the second parameter to the first parameter.    
 `o` Outputs rs to stdout.    
 `i` Waits for one byte stdin and outputs to ro.    
 `b` Continue if parameter is not zero.    
