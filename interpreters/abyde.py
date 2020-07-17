@@ -47,10 +47,10 @@ while True:
 			print(chr(rs), end='')
 		elif current_command[0] == 'i':
 			ro = ord(list(input(''))[0])
+		elif current_command[0] == 'r':
+			break
 		elif current_command[0] == 'b':
 			if eval(current_command[1]) == 0:
-				print('', end='') # very basic nop
-			else:
 				current_section += 1
 				break
 		elif current_command[0] == 'q':

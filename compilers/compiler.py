@@ -29,6 +29,15 @@ def abyde_print(text):
 		output_prg += 'm rs {}|o|'.format(text_ints[j])
 	return output_prg
 
+def abyde_multiply(num, times, outvar):
+	output_prg = ''
+	output_prg += 'm ro {}|'.format(num)
+	output_prg += 'm ra {}||'.format(times)
+	output_prg += 'b ra|'
+	output_prg += 'a ro ro|'
+	output_prg += 'r||'
+	output_prg += 'm ro {}|'.format(outvar)
+	return output_prg
 
 
 
@@ -52,7 +61,7 @@ for i in range(len(commands)):
 		compiled_prg += '|m {} ro|'.format(commands[i].split(' ')[5])
 	elif commands[i].split(' ')[0] == 'display':
 		compiled_prg += 'm rs {}|o|'.format(commands[i].split(' ')[1])
-	elif commands[i].split(' ')[0] == 'ifzero':
+	elif commands[i].split(' ')[0] == 'notzero':
 		compiled_prg += 'b {}|'.format(commands[i].split(' ')[1])
 	elif commands[i].split(' ')[0] == 'endif':
 		compiled_prg += '||'
@@ -60,6 +69,8 @@ for i in range(len(commands)):
 		compiled_prg += 'm {} {}|'.format(commands[i].split(' ')[1], commands[i].split(' ')[3])
 	elif commands[i].split(' ')[0] == 'input':
 		compiled_prg += 'i|m {} ro|'.format(commands[i].split(' ')[2])
+	elif commands[i].split(' ')[0] == 'multiply':
+		abyde_multiply(commands[i].split('')[1], commands[i].split('')[3], commands[i].split('')[5])
 	else:
 		print("ERROR: INVALID COMMAND")
 		print(commands[i])

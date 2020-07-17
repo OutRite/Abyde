@@ -11,5 +11,8 @@ sub ra and 97 to rb
 ifzero rb
 print  fail`
 endif
-print  pass`
+print  pas
+multiply 23 and 5 to ra
+display ra
+print `
 exit

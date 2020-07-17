@@ -16,10 +16,10 @@ Sections are ended with `||`.
 `m` Moves data from the second parameter to the first parameter.    
 `o` Outputs rs to stdout.    
 `i` Waits for one byte stdin and outputs to ro.    
-`b` Checks if the first parameter is zero and, if so, continues.    
-Else, it jumps to the next section.    
+`b` Continue if parameter is not zero.    
 `q` Stops execution entirely.    
+`r` Repeats the current section.    
 ## Test
 In examples you are provided with `fulltest.abyde`.    
-To pass the provided test with a working interpreter, type anything into stdin    
-except for `a`. It should fail if you input `a` and only `a` (that means it works)
+To pass the provided test with a working interpreter, type `a` into    
+stdin.
