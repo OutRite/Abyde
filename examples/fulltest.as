@@ -8,8 +8,9 @@ display rs
 print t
 input to ra
 sub ra and 97 to rb
-ifzero rb
+notzero rb
 print  fail`
+exit
 endif
 print  pas
 multiply 23 and 5 to ra

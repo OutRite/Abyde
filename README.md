@@ -5,6 +5,7 @@ Default file extension is `abyde`
 `ro` is the register that all commands output to.    
 `ra` is a register used for basic data storage.    
 `rb` is a register also used for basic data storage.    
+`rt` is a temporary register that should mainly only be used as swap.    
 `rs` contains the current byte to be output to screen.    
 All registers should start at zero, except for `rb`, which should start at one.
 ## Instructions
