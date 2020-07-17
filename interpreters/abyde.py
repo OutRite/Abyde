@@ -40,8 +40,8 @@ while True:
 	for i in range(len(sections[current_section])):
 		on_repeat = False
 		current_command = sections[current_section][i]
-		#print(current_command)
-		#print('ra: {} rb: {} ro: {} rs: {} rt: {}'.format(ra,rb,ro,rs,rt))
+		# print(current_command)
+		# print('ra: {} rb: {} ro: {} rs: {} rt: {}'.format(ra,rb,ro,rs,rt))
 		current_command = current_command.split(' ')
 		if current_command[0] == 'a':
 			exec('ro = {} + {}'.format(current_command[1], current_command[2]))
@@ -63,6 +63,6 @@ while True:
 			sys.exit()
 		else:
 			print('', end='') # basic nop, we assume this is some sort of data/invalid command
-	if on_repeat == False:
+	if on_repeat is False:
 		current_section += 1
-	#print('DEBUG: current_section = ' + str(current_section))
+	# print('DEBUG: current_section = ' + str(current_section))

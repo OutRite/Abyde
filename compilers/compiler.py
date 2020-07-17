@@ -11,7 +11,7 @@ as_prg = as_file.read()
 
 as_file.close()
 
-as_prg = as_prg.replace('\r', '') #augh windows i hate you
+as_prg = as_prg.replace('\r', '') # augh windows i hate you
 
 commands = as_prg.split('\n')
 
@@ -28,6 +28,7 @@ def abyde_print(text):
 	for j in range(len(text_ints)):
 		output_prg += 'm rs {}|o|'.format(text_ints[j])
 	return output_prg
+
 
 def abyde_multiply(num, times, outvar):
 	output_prg = '||'
@@ -58,7 +59,7 @@ for i in range(len(commands)):
 		compiled_prg += ' '
 		compiled_prg += current_command[3]
 		compiled_prg += '|'
-		compiled_prg += 'm {} ro|'.format(current_command[5]) 
+		compiled_prg += 'm {} ro|'.format(current_command[5])
 	elif current_command[0] == 'sub':
 		compiled_prg += 's '
 		compiled_prg += current_command[1]
