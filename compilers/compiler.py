@@ -70,7 +70,7 @@ for i in range(len(commands)):
 	elif commands[i].split(' ')[0] == 'input':
 		compiled_prg += 'i|m {} ro|'.format(commands[i].split(' ')[2])
 	elif commands[i].split(' ')[0] == 'multiply':
-		abyde_multiply(commands[i].split('')[1], commands[i].split('')[3], commands[i].split('')[5])
+		abyde_multiply(commands[i].split(' ')[1], commands[i].split(' ')[3], commands[i].split(' ')[5])
 	else:
 		print("ERROR: INVALID COMMAND")
 		print(commands[i])
