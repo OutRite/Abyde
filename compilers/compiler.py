@@ -44,8 +44,22 @@ for i in range(len(commands)):
 		compiled_prg += commands[i].split(' ')[3]
 		compiled_prg += '|'
 		compiled_prg += 'm {} ro|'.format(commands[i].split(' ')[5]) 
+	elif commands[i].split(' ')[0] == 'sub':
+		compiled_prg += 's '
+		compiled_prg += commands[i].split(' ')[1]
+		compiled_prg += ' '
+		compiled_prg += commands[i].split(' ')[3]
+		compiled_prg += '|m {} ro|'.format(commands[i].split(' ')[5])
 	elif commands[i].split(' ')[0] == 'display':
 		compiled_prg += 'm rs {}|o|'.format(commands[i].split(' ')[1])
+	elif commands[i].split(' ')[0] == 'ifzero':
+		compiled_prg += 'b {}|'.format(commands[i].split(' ')[1])
+	elif commands[i].split(' ')[0] == 'endif':
+		compiled_prg += '||'
+	elif commands[i].split(' ')[0] == 'set':
+		compiled_prg += 'm {} {}'.format(commands[i].split(' ')[1], commands[i].split(' ')[3])
+	elif commands[i].split(' ')[0] == 'input':
+		compiled_prg += 'i|m {} ro|'.format(commands[i].split(' ')[2])
 	else:
 		print("ERROR: INVALID COMMAND")
 		print(commands[i])
