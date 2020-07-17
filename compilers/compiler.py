@@ -45,7 +45,7 @@ for i in range(len(commands)):
 		compiled_prg += '|'
 		compiled_prg += 'm ro {}|'.format(commansd[i].split(' ')[5]) 
 	elif commands[i].split(' ')[0] == 'display':
-		compiled_prg += 'm rs {}|o'.format(commands[i].split(' ')[1])
+		compiled_prg += 'm rs {}|o|'.format(commands[i].split(' ')[1])
 	else:
 		print("ERROR: INVALID COMMAND")
 		print(commands[i])
