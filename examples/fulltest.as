@@ -12,3 +12,4 @@ ifzero rb
 print  fail`
 endif
 print  pass`
+exit
