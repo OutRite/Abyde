@@ -1,4 +1,4 @@
-#AbydeScript to Abyde compiler.
+# AbydeScript to Abyde compiler.
 import sys
 
 if len(sys.argv) < 2:
@@ -11,11 +11,12 @@ as_prg = as_file.read()
 
 as_file.close()
 
-as_prg = as_prg.replace('\r', '') # augh windows i hate you
+as_prg = as_prg.replace('\r', '')  # augh windows i hate you
 
 commands = as_prg.split('\n')
 
 compiled_prg = ''
+
 
 def abyde_print(text):
 	text_ints = list(text)
@@ -32,17 +33,17 @@ def abyde_print(text):
 
 def abyde_multiply(num, times, outvar):
 	output_prg = '||'
-	output_prg += 'm ro {}|'.format(num) # we move the number into ro
-	output_prg += 'm rt ro|' # we move ro into rt
-	output_prg += 'm ra {}||'.format(int(times)-1) # we move the iteration count into ra
-	output_prg += 'b ra|' # we check if we've gone through all iterations
-	output_prg += 'a ro rt|' # we haven't, so we add ro and the first number
-	output_prg += 'm rb ro|' # we move ro into rb
-	output_prg += 's ra 1|' # we decrease the iteration count
-	output_prg += 'm ra ro|' # we move everything back into normal positions
-	output_prg += 'm ro rb|' # and now ro contains our new number
-	output_prg += 'r||' # repeat until done
-	output_prg += 'm {} ro|'.format(outvar) # we move our new number into whatever variable provided
+	output_prg += 'm ro {}|'.format(num)  # we move the number into ro
+	output_prg += 'm rt ro|'  # we move ro into rt
+	output_prg += 'm ra {}||'.format(int(times)-1)  # we move the iteration count into ra
+	output_prg += 'b ra|'  # we check if we've gone through all iterations
+	output_prg += 'a ro rt|'  # we haven't, so we add ro and the first number
+	output_prg += 'm rb ro|'  # we move ro into rb
+	output_prg += 's ra 1|'  # we decrease the iteration count
+	output_prg += 'm ra ro|'  # we move everything back into normal positions
+	output_prg += 'm ro rb|'  # and now ro contains our new number
+	output_prg += 'r||'  # repeat until done
+	output_prg += 'm {} ro|'.format(outvar)  # we move our new number into whatever variable provided
 	return output_prg
 
 
