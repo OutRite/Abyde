@@ -37,6 +37,15 @@ for i in range(len(commands)):
 		compiled_prg += abyde_print(commands[i][6:])
 	elif commands[i].split(' ')[0] == 'exit':
 		compiled_prg += 'q|'
+	elif commands[i].split(' ')[0] == 'add':
+		compiled_prg += 'a '
+		compiled_prg += commands[i].split(' ')[1]
+		compiled_prg += ' '
+		compiled_prg += commands[i].split(' ')[3]
+		compiled_prg += '|'
+		compiled_prg += 'm ro {}|'.format(commansd[i].split(' ')[5]) 
+	elif commands[i].split(' ')[0] == 'display':
+		compiled_prg += 'm rs {}|o'.format(commands[i].split(' ')[1])
 	else:
 		print("ERROR: INVALID COMMAND")
 		print(commands[i])
