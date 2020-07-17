@@ -21,6 +21,8 @@ Sections are ended with `||`.
 `q` Stops execution entirely.    
 `r` Repeats the current section.    
 ## Test
-In examples you are provided with `fulltest.abyde`.    
-To pass the provided test with a working interpreter, type `a` into    
-stdin.
+In examples you are provided with `fulltest.as`.    
+You will need to properly compile this from AbydeScript    
+and run it in a working interpreter.    
+The test should only pass if you type `a`.    
+Otherwise, it should fail.
