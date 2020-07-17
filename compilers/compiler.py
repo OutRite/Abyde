@@ -35,7 +35,7 @@ def abyde_multiply(num, times, outvar):
 	output_prg = '||'
 	output_prg += 'm ro {}|'.format(num)  # we move the number into ro
 	output_prg += 'm rt ro|'  # we move ro into rt
-	output_prg += 'm ra {}||'.format(int(times)-1)  # we move the iteration count into ra
+	output_prg += 'm ra {}||'.format(int(times) - 1)  # we move the iteration count into ra
 	output_prg += 'b ra|'  # we check if we've gone through all iterations
 	output_prg += 'a ro rt|'  # we haven't, so we add ro and the first number
 	output_prg += 'm rb ro|'  # we move ro into rb
