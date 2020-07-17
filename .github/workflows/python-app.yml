@@ -35,3 +35,5 @@ jobs:
       run: |
         python compilers/compiler.py examples/fulltest.as > fulltest.as.abyde
         echo a | python interpreters/abyde.py fulltest.as.abyde
+        echo The Following Test IS SUPPOSED TO FAIL!!
+        echo b | python interpreters/abyde.py fulltest.as.abyde
